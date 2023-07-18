@@ -12,7 +12,7 @@ def exit_program():
 
 def on_clear_arg():
     cwd = os.getcwd()
-    bin_fold = os.path.join(cwd, "bin")
+    bin_fold = os.path.join(cwd, "build")
 
     if(os.path.exists(bin_fold)):
         try:
@@ -30,22 +30,22 @@ def on_clear_arg():
 
 def check_bin_folder():
     cwd = os.getcwd()
-    bin_fold = os.path.join(cwd, "bin")
+    bin_fold = os.path.join(cwd, "build")
 
     if(not os.path.exists(bin_fold)):
         os.mkdir(bin_fold)
-        print("Bin folder not found, created!")
+        print("Build folder not found, created!")
 
 
 def generate_cmake():
     cwd = os.getcwd()
-    bin_fold = os.path.join(cwd, "bin")
+    bin_fold = os.path.join(cwd, "build")
     subprocess.run(["cmake", "-B", bin_fold,"."])
 
 
 def cmake_build():
     cwd = os.getcwd()
-    bin_fold = os.path.join(cwd, "bin")
+    bin_fold = os.path.join(cwd, "build")
     subprocess.run(["cmake", "--build", bin_fold])
 
 
