@@ -7,8 +7,14 @@ set(COSMOS_HRD
 )
 
 add_library(
-    CosmosCore STATIC
+    CosmosCore
     ${COSMOS_SRC} ${COSMOS_HRD}
 )
 
 target_include_directories(CosmosCore PRIVATE include/Core/)
+target_include_directories(CosmosCore PRIVATE ${PROJECT_SOURCE_DIR}/CosmosEditor/include/)
+
+
+if (CMAKE_GENERATOR MATCHES "Visual Studio")
+    source_group("Header Files\\Core" FILES ${COSMOS_HRD})
+endif()

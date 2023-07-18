@@ -2,25 +2,21 @@
 #define APPLICATION_H
 
 
-
 namespace CosmosCore {
-class Application {
-   public:
-    Application(Application const&) = delete;
-    Application& operator=(Application const&) = delete;
+	struct BootOptions
+	{
 
-    static Application& Get();
-    void PrintTest();
-    int GetData();
+	};
 
-   private:
-    Application();
-    ~Application();
+	class Application {
+	public:
+		Application(const char* execpath, int argc, char* argv[]);
+		~Application();
 
-   private:
-    int data = 0;
-};
+	private:
 
+
+	};
 }  // namespace CosmosCore
 
 #endif
