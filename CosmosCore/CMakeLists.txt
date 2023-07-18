@@ -12,7 +12,13 @@ add_library(
 )
 
 target_include_directories(CosmosCore PRIVATE include/Core/)
-target_include_directories(CosmosCore PRIVATE ${PROJECT_SOURCE_DIR}/CosmosEditor/include/)
+target_include_directories(CosmosCore INTERFACE ${PROJECT_SOURCE_DIR}/CosmosCore/include/)
+
+
+target_include_directories(CosmosCore PUBLIC
+    ${OPENGL_INCLUDE_DIRS}
+    ${PROJECT_SOURCE_DIR}/Vendor/glfw/include/
+)
 
 
 if (CMAKE_GENERATOR MATCHES "Visual Studio")

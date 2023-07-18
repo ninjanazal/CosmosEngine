@@ -8,6 +8,7 @@ using namespace CosmosCore;
 int main(int argc, char** argv) {
     Application* app = new Application(argv[0], argc - 1, &argv[1]);
 
+    app->Run();
 
     delete app;
     return 0;
