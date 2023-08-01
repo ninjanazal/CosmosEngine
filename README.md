@@ -1,2 +1,5 @@
-# CosmosEngine
-Educational game engine designed for 2D game development using C++ and OpenGL. It serves as a learning project and provides a basic framework for understanding the fundamental concepts and principles of building 2D games from scratch.
+# 3D Viewer with OpenGL
+
+## Introduction
+
+The 3D Viewer with OpenGL is an educational project aimed at providing an interactive and intuitive tool for visualizing 3D models. Built using OpenGL, this viewer allows users to explore 3D objects with ease, making it an excellent resource for students and enthusiasts seeking to understand 3D graphics and computer graphics principles.
